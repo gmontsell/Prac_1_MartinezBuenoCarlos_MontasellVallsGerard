@@ -12,7 +12,7 @@ public class DeaclePool : MonoBehaviour
     {
         for (int i=0; i< poolsize;i++)
         {
-           GameObject gobj=  Instantiate(objectToPool);
+            GameObject gobj=  Instantiate(objectToPool);
             gobj.SetActive(false);
             pooledObj.Add(gobj);
 

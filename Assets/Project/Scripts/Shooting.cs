@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform weaponDoomy;
+    //[SerializeField] private GameObject bullet;
+    //[SerializeField] private Transform weaponDoomy;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float maxDistance;
     [SerializeField] private LayerMask shootLayerMask;
@@ -44,7 +44,7 @@ public class Shooting : MonoBehaviour
             else cannotShoot();
 
         }
-        if (Input.GetMouseButtonUp(2)) shooByInstantatiation();
+        //if (Input.GetMouseButtonUp(2)) shooByInstantatiation();
 
     }
 
@@ -63,11 +63,11 @@ public class Shooting : MonoBehaviour
         //TODO CANNOT SHOT ANIMATION
         Debug.Log("no pots disparar");
     }
-    void shooByInstantatiation()
-    {
-        GameObject currBull = Instantiate(bullet, weaponDoomy.position, weaponDoomy.rotation);
-        currBull.GetComponent<Rigidbody>().velocity = weaponDoomy.forward * bulletSpeed;
-    }
+    //void shooByInstantatiation()
+    //{
+    //    GameObject currBull = Instantiate(bullet, weaponDoomy.position, weaponDoomy.rotation);
+    //    currBull.GetComponent<Rigidbody>().velocity = weaponDoomy.forward * bulletSpeed;
+    //}
        
 
 
