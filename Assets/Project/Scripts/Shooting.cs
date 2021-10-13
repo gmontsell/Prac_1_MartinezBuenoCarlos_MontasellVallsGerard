@@ -78,7 +78,7 @@ public class Shooting : MonoBehaviour
     public void addBullets(int numBullets)
     {
         unloadedBullets += numBullets;
-        unloadedBullets = Mathf.Min(unloadedBullets, maxLoadedBullets);
+        unloadedBullets = Mathf.Min(unloadedBullets, maxUnloadedBullets);
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
     }
 
@@ -92,7 +92,8 @@ public class Shooting : MonoBehaviour
         HealthSystem hs = hitInfo.transform.gameObject.GetComponent<HealthSystem>();
         if (hs != null)  hs.takeDamage(bulletDmg);
             //ADD deal
-        deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
+        GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
+            deacle.transform.parent = hitInfo.transform;
         //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
         }
         ammoChanged.Invoke(loadedBullets, unloadedBullets);

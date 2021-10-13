@@ -11,4 +11,9 @@ public class HealthSystem : MonoBehaviour
         health -= value;
         if (health <= 0.0f) Destroy(gameObject);
     }
+    private void Update()
+    {
+        /*foreach (Transform child in transform)
+            if(child.gameObject.layer == 2) child.gameObject.SetActive(false);*/
+    }
 }

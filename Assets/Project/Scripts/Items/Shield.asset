@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4eff1d7bc5c2a941b5675db09bbe9b5, type: 3}
-  m_Name: star
+  m_Name: Shield
   m_EditorClassIdentifier: 
   ammo: 0
-  shield: 50
-  health: 0
+  shield: 100
+  health: 100
