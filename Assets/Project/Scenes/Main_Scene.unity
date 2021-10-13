@@ -197,7 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54ccf425a01f2d44a913fd01d5b7ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPool: {fileID: 681926008241049075, guid: 0ef7ae860135e3c4abb092fac8ba881a, type: 3}
+  objectToPool: {fileID: 681926008241049075, guid: 0ef7ae860135e3c4abb092fac8ba881a,
+    type: 3}
   poolsize: 20
 --- !u!1 &232632226
 GameObject:
@@ -435,8 +436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140cad6612e80cf4ba41a6cc1e3cd193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  weaponDoomy: {fileID: 0}
   bulletSpeed: 50
   maxDistance: 100
   shootLayerMask:
@@ -463,9 +462,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  decal: {fileID: 0}
-  zOffset: 0
-  deaclePool: {fileID: 0}
+  decal: {fileID: 681926008241049075, guid: 0ef7ae860135e3c4abb092fac8ba881a, type: 3}
+  zOffset: 0.05
+  deaclePool: {fileID: 158789167}
 --- !u!64 &638494423
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1195,7 +1194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 404, y: -249}
+  m_AnchoredPosition: {x: 404, y: -192.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400567529
