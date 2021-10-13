@@ -17,6 +17,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] private int loadedBullets = 0;
     [SerializeField] private int unloadedBullets = 0;
     [SerializeField] private int maxLoadedBullets = 10;
+    [SerializeField] private int maxUnloadedBullets = 100;
     [SerializeField] private KeyCode reoladKeyCode = KeyCode.R;
 
     [SerializeField] private Camera cam;
@@ -25,7 +26,11 @@ public class Shooting : MonoBehaviour
     [Header("Decal")]
     [SerializeField] private GameObject decal;
     [SerializeField] private float zOffset;
-    [SerializeField] private DeaclePool deaclePool; 
+    [SerializeField] private DeaclePool deaclePool;
+
+    [SerializeField] private Animation anim;
+
+
     private void Start()
     {
         ammoChanged.Invoke(loadedBullets,unloadedBullets);
@@ -70,6 +75,13 @@ public class Shooting : MonoBehaviour
     //}
        
 
+    public void addBullets(int numBullets)
+    {
+        unloadedBullets += numBullets;
+        unloadedBullets = Mathf.Min(unloadedBullets, maxLoadedBullets);
+        ammoChanged.Invoke(loadedBullets, unloadedBullets);
+    }
+
 
     void shootByRaycast()
     {
@@ -84,5 +96,10 @@ public class Shooting : MonoBehaviour
         //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
         }
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
+
+
+        anim.CrossFade("shoot_clip", 0.3f);
+        anim.CrossFadeQueued("idle_clip", 0.3f);
+
     }
 }
