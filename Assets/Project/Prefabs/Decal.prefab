@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8139747533553224697}
   - component: {fileID: 3367505882016078146}
   - component: {fileID: 4982701553223996791}
+  - component: {fileID: 4550723071309748687}
   m_Layer: 2
   m_Name: Decal
   m_TagString: Untagged
@@ -96,3 +97,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4550723071309748687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681926008241049075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80d0711f975a884fa78cfe8359b6f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DestroyOnTime: 3
+  decalepool: {fileID: 0}

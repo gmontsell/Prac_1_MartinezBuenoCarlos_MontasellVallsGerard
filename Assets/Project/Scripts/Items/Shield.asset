@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: 0
   shield: 100
-  health: 100
+  health: 0

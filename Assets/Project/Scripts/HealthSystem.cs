@@ -1,19 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] float health = 100.0f;
+    [SerializeField] float health = 200.0f;
+    [SerializeField] DeaclePool decalepool;
     // Start is called before the first frame update
     public void takeDamage(float value)
     {
         health -= value;
-        if (health <= 0.0f) Destroy(gameObject);
+        if (health <= 0.0f)
+        {
+            Transform[] allChildren = GetComponentsInChildren<Transform>();
+            foreach (Transform child in allChildren)
+            {
+                if (child.gameObject.layer == 2)
+                {
+                    child.transform.parent = decalepool.gameObject.transform;
+                    child.gameObject.SetActive(false);
+                }
+            }
+            Destroy(gameObject);
+        }
     }
-    private void Update()
+
+    public void lifeIncrease(float health_inc)
     {
-        /*foreach (Transform child in transform)
-            if(child.gameObject.layer == 2) child.gameObject.SetActive(false);*/
+        Debug.Log("Subiendo vidas");
+        health += health_inc;
     }
 }

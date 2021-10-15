@@ -93,7 +93,7 @@ public class Shooting : MonoBehaviour
         if (hs != null)  hs.takeDamage(bulletDmg);
             //ADD deal
         GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
-            deacle.transform.parent = hitInfo.transform;
+        deacle.transform.parent = hitInfo.transform;
         //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
         }
         ammoChanged.Invoke(loadedBullets, unloadedBullets);

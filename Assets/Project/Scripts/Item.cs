@@ -9,9 +9,14 @@ public class Item : MonoBehaviour
     public void consume (GameObject consumer)
     {
         Shooting sh = consumer.GetComponent<Shooting>();
+        HealthSystem hs = consumer.GetComponent<HealthSystem>();
         if (sh != null)
         {
             sh.addBullets(itemData.ammo);
+        }
+        if (hs != null)
+        {
+            hs.lifeIncrease(itemData.health);
         }
         Destroy(gameObject);
     }

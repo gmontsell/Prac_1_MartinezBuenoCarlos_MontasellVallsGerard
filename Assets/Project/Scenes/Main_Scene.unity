@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToPool: {fileID: 681926008241049075, guid: 0ef7ae860135e3c4abb092fac8ba881a,
     type: 3}
-  poolsize: 20
+  poolsize: 3
 --- !u!1 &232632226
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  decalepool: {fileID: 0}
 --- !u!1 &591969147
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +974,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420ab0980bd89ae42b46ad6fc54c0523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
+  decalepool: {fileID: 158789167}
 --- !u!33 &688253404
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1072,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  decalepool: {fileID: 158789167}
 --- !u!82 &692601246
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2802,7 +2805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525640849134723129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.231789, y: 0.755, z: 82.670204}
+  m_LocalPosition: {x: 18.62, y: 0.755, z: 84.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3258,13 +3261,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3899593968563909900}
-  m_LocalRotation: {x: -0.007283776, y: 0.12166237, z: 0.09982238, w: 0.9875124}
-  m_LocalPosition: {x: 16.057, y: 0.856, z: 84.078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.48, y: 1.22, z: 81.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -2.216, y: 13.828001, z: 11.275001}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.432, z: 0}
 --- !u!1 &3899593968563909900
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,8 +3311,9 @@ Animation:
   m_GameObject: {fileID: 3899593968563909900}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 3cd0505b651821f4cbba6ae582d3322e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3cd0505b651821f4cbba6ae582d3322e, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
