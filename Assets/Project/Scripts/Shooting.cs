@@ -57,6 +57,8 @@ public class Shooting : MonoBehaviour
     {
         int loadedEmptyBullets = maxLoadedBullets - loadedBullets;
         int toLoad = Mathf.Min(unloadedBullets, loadedEmptyBullets);
+        anim.CrossFade("reload_clip", 0.3f);
+        anim.CrossFadeQueued("idle_clip", 0.3f);
         loadedBullets += toLoad;
         unloadedBullets -= toLoad;
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
@@ -65,8 +67,8 @@ public class Shooting : MonoBehaviour
     }
     void cannotShoot()
     {
-        //TODO CANNOT SHOT ANIMATION
-        Debug.Log("no pots disparar");
+        anim.CrossFade("noAmmo_clip", 0.3f);
+        anim.CrossFadeQueued("idle_clip", 0.3f);
     }
     //void shooByInstantatiation()
     //{

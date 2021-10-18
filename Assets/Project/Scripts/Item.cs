@@ -8,15 +8,20 @@ public class Item : MonoBehaviour
 
     public void consume (GameObject consumer)
     {
-        Shooting sh = consumer.GetComponent<Shooting>();
+        Shooting shooting = consumer.GetComponent<Shooting>();
         HealthSystem hs = consumer.GetComponent<HealthSystem>();
-        if (sh != null)
+        Shield shield = consumer.GetComponent<Shield>();
+        if (shooting != null)
         {
-            sh.addBullets(itemData.ammo);
+            shooting.addBullets(itemData.ammo);
         }
         if (hs != null)
         {
             hs.lifeIncrease(itemData.health);
+        }
+        if (shield != null)
+        {
+            shield.shieldIncrease(itemData.shield);
         }
         Destroy(gameObject);
     }

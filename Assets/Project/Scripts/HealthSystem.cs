@@ -6,11 +6,12 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] float health = 200.0f;
+    [SerializeField] float max_health = 200.0f;
     [SerializeField] DeaclePool decalepool;
-    // Start is called before the first frame update
+    
     public void takeDamage(float value)
     {
-        health -= value;
+        health -= calculateDmg(value);
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
@@ -26,9 +27,22 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+    private float calculateDmg(float act_dmg)
+    {
+        Shield shield = gameObject.GetComponent<Shield>();
+        if (shield.haveShield())
+        {
+            return shield.calculateDmg(act_dmg);
+        }
+        else
+        {
+            return act_dmg;
+        }
+    }
+
     public void lifeIncrease(float health_inc)
     {
-        Debug.Log("Subiendo vidas");
         health += health_inc;
+        health = Mathf.Min(health, max_health);
     }
 }
