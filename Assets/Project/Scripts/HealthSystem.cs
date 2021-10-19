@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void DieFunction();
+
+
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] float health = 200.0f;
@@ -12,8 +15,14 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] GameManager1 gameManager;
 
     private float initialHealth;
+    private DieFunction die;
 
-   
+
+    public void setDieFunction(DieFunction die)
+    {
+        this.die = die;
+    }
+
 
     public void OnEnable()
     {
@@ -24,7 +33,7 @@ public class HealthSystem : MonoBehaviour
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
-            gameManager.gameOver();
+            die();
     }
 
 
