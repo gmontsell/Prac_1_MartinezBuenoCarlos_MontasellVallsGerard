@@ -8,7 +8,26 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] float health = 200.0f;
     [SerializeField] float max_health = 200.0f;
     [SerializeField] DeaclePool decalepool;
-    
+
+    [SerializeField] GameManager1 gameManager;
+
+    private float initialHealth;
+
+   
+
+    public void OnEnable()
+    {
+        initialHealth = health;
+    }
+
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+            gameManager.gameOver();
+    }
+
+
     public void takeDamage(float value)
     {
         health -= calculateDmg(value);
@@ -27,17 +46,26 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+    internal void restart()
+    {
+        health = initialHealth;
+    }
+
     private float calculateDmg(float act_dmg)
     {
         Shield shield = gameObject.GetComponent<Shield>();
-        if (shield.haveShield())
-        {
-            return shield.calculateDmg(act_dmg);
-        }
-        else
-        {
-            return act_dmg;
-        }
+
+       
+            if (shield != null && shield.haveShield())
+            {
+                return shield.calculateDmg(act_dmg);
+            }
+            else
+            {
+                return act_dmg;
+            }
+       
+        
     }
 
     public void lifeIncrease(float health_inc)
