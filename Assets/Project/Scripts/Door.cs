@@ -10,9 +10,11 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Player>())
+        if (other.gameObject.GetComponent<Player>()
+            &&!isOpen
+            &&other.gameObject.GetComponent<Keys>().canOPen(key.getId()))
         {
-            anim.CrossFade("door_Open");
+            anim.CrossFade("door_Open"); //FALTA HACERLA
             Debug.Log("AAAAA");
             //se abre la puerta
             isOpen = true;
