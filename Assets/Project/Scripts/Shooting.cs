@@ -22,6 +22,7 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] private Camera cam;
     [SerializeField] private UnityEvent<int, int> ammoChanged;
+    [SerializeField] private UnityEvent<int> pointChanged;
 
     [Header("Decal")]
     [SerializeField] private GameObject decal;
@@ -34,6 +35,7 @@ public class Shooting : MonoBehaviour
     private void Start()
     {
         ammoChanged.Invoke(loadedBullets,unloadedBullets);
+        pointChanged.Invoke(0);
     }
     void Update()
     {
@@ -92,7 +94,13 @@ public class Shooting : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(r, out hitInfo, maxDistance, shootLayerMask)) { 
         HealthSystem hs = hitInfo.transform.gameObject.GetComponent<HealthSystem>();
-        if (hs != null)  hs.takeDamage(bulletDmg);
+            if (hs != null)
+            {
+                if (hs.CompareTag("Target")) { pointChanged.Invoke(10); }
+                else if (hs.CompareTag("ExplosiveBarrel")) { pointChanged.Invoke(5); }
+                hs.takeDamage(bulletDmg);
+                
+            }
             //ADD deal
         GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
         deacle.transform.parent = hitInfo.transform;

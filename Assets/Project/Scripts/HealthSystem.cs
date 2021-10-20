@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public delegate void DieFunction();
 
@@ -13,6 +14,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] DeaclePool decalepool;
 
     [SerializeField] GameManager1 gameManager;
+    [SerializeField] private UnityEvent<int> pointChanged;
 
     private float initialHealth;
     private DieFunction die;
