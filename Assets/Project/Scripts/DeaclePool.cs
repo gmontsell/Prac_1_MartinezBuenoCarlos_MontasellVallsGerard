@@ -8,6 +8,7 @@ public class DeaclePool : MonoBehaviour
     [SerializeField] private GameObject objectToPool;
     private List<GameObject> pooledObj = new List<GameObject>();
     [SerializeField] private int poolsize;
+    private int idx = 0;
     void Start()
     {
         for (int i=0; i< poolsize;i++)
@@ -37,6 +38,8 @@ public class DeaclePool : MonoBehaviour
         {
             if (!gObj.activeInHierarchy) return gObj;
         }
-        return null;
+        if (idx <= pooledObj.Count) idx++;
+        else idx = 0;
+        return pooledObj[idx];
     }
 }

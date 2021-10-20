@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour
 {
-    private List<KeyData> keys;
+    public List<KeyData> keys;
+    private void Awake()
+    {
+        keys = new List<KeyData>();
+    }
 
-    //public bool hasKey(KeyData keyData)
-    //{
-    //    return keys.Contains(keyData);
-    //}
-
+    public void addKey(KeyData key)
+    {
+        if (key != null) keys.Add(key);
+    }
     public bool canOPen(string doorId)
     {
         foreach(KeyData k in keys)

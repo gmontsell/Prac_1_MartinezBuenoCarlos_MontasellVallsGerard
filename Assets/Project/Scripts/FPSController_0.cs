@@ -116,4 +116,14 @@ public class FPSController_0 : MonoBehaviour
         M_Pitch_Controller.transform.localRotation = Quaternion.Euler(mPitch, 0, 0);
 
     }
+
+    public void modifMYaw(float x)
+    {
+        mYaw += x;
+    }
+
+    public void modifMPitch(float y)
+    {
+        mPitch += y;
+    }
 }

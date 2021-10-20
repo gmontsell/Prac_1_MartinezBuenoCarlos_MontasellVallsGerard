@@ -15,8 +15,6 @@ public class Door : MonoBehaviour
             &&other.gameObject.GetComponent<Keys>().canOPen(key.getId()))
         {
             anim.CrossFade("door_Open"); //FALTA HACERLA
-            Debug.Log("AAAAA");
-            //se abre la puerta
             isOpen = true;
         }
 

@@ -28,7 +28,12 @@ public class Shooting : MonoBehaviour
     [SerializeField] private float zOffset;
     [SerializeField] private DeaclePool deaclePool;
 
+    [Header("Animation")]
     [SerializeField] private Animation anim;
+
+    [Header("Recoil")]
+    [SerializeField] private Recoil rec;
+
 
 
     private void Start()
@@ -90,13 +95,12 @@ public class Shooting : MonoBehaviour
         //Para caida de bala hacemos calculo del raycast modificando la velocidad màxima
         Ray r = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
         RaycastHit hitInfo;
+        rec.recoilShooting();
         if (Physics.Raycast(r, out hitInfo, maxDistance, shootLayerMask)) { 
         HealthSystem hs = hitInfo.transform.gameObject.GetComponent<HealthSystem>();
-        if (hs != null)  hs.takeDamage(bulletDmg);
-            //ADD deal
         GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
         deacle.transform.parent = hitInfo.transform;
-        //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
+        if (hs != null) hs.takeDamage(bulletDmg);
         }
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
 

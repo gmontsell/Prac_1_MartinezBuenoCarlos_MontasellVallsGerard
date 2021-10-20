@@ -43,15 +43,29 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
+            bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
-                if (child.gameObject.layer == 2)
-                {
-                    child.transform.parent = decalepool.gameObject.transform;
-                    child.gameObject.SetActive(false);
-                }
+                Debug.Log(child);
+                if (child.gameObject.layer==2) haveDecal = true;
+
             }
-            Destroy(gameObject);
+
+            if (haveDecal)
+            {
+                for (int i = 0; i < allChildren.Length; i++)
+                {
+                    Debug.Log(i);
+                    Debug.Log(allChildren[i]);
+                    if (allChildren[i].gameObject.layer == 2)
+                    {
+                        allChildren[i].gameObject.SetActive(false);
+                        allChildren[i].transform.parent = decalepool.gameObject.transform;
+                    }
+                }
+                Destroy(gameObject);
+            }
+            else Destroy(gameObject);
         }
     }
 
