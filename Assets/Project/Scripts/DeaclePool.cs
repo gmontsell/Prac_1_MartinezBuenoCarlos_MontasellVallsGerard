@@ -38,7 +38,7 @@ public class DeaclePool : MonoBehaviour
         {
             if (!gObj.activeInHierarchy) return gObj;
         }
-        if (idx <= pooledObj.Count) idx++;
+        if (idx < pooledObj.Count) idx++;
         else idx = 0;
         return pooledObj[idx];
     }

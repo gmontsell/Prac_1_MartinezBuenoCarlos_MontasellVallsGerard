@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public delegate void DieFunction();
 
@@ -15,6 +16,8 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] GameManager1 gameManager;
     [SerializeField] private UnityEvent<int> pointChanged;
+
+    [SerializeField]  Slider slider;
 
     private float initialHealth;
     private DieFunction die;
@@ -31,7 +34,10 @@ public class HealthSystem : MonoBehaviour
         initialHealth = health;
     }
 
-
+    public void Start()
+    {
+        if(gameObject.name=="Player") slider.value = health;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -42,13 +48,13 @@ public class HealthSystem : MonoBehaviour
     public void takeDamage(float value)
     {
         health -= calculateDmg(value);
+        slider.value = health;
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
             bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
-                Debug.Log(child);
                 if (child.gameObject.layer==2) haveDecal = true;
 
             }
@@ -57,8 +63,6 @@ public class HealthSystem : MonoBehaviour
             {
                 for (int i = 0; i < allChildren.Length; i++)
                 {
-                    Debug.Log(i);
-                    Debug.Log(allChildren[i]);
                     if (allChildren[i].gameObject.layer == 2)
                     {
                         allChildren[i].gameObject.SetActive(false);
@@ -74,6 +78,7 @@ public class HealthSystem : MonoBehaviour
     internal void restart()
     {
         health = initialHealth;
+        slider.value = health;
     }
 
     private float calculateDmg(float act_dmg)
@@ -97,5 +102,6 @@ public class HealthSystem : MonoBehaviour
     {
         health += health_inc;
         health = Mathf.Min(health, max_health);
+        slider.value = health;
     }
 }
