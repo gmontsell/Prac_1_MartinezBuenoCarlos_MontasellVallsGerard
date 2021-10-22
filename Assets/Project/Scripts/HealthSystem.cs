@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public delegate void DieFunction();
 
@@ -14,7 +14,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] DeaclePool decalepool;
 
     [SerializeField] GameManager1 gameManager;
-    [SerializeField] private UnityEvent<int> pointChanged;
+    
 
     private float initialHealth;
     private DieFunction die;
@@ -45,29 +45,15 @@ public class HealthSystem : MonoBehaviour
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
-            bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
-                Debug.Log(child);
-                if (child.gameObject.layer==2) haveDecal = true;
-
-            }
-
-            if (haveDecal)
-            {
-                for (int i = 0; i < allChildren.Length; i++)
+                if (child.gameObject.layer == 2)
                 {
-                    Debug.Log(i);
-                    Debug.Log(allChildren[i]);
-                    if (allChildren[i].gameObject.layer == 2)
-                    {
-                        allChildren[i].gameObject.SetActive(false);
-                        allChildren[i].transform.parent = decalepool.gameObject.transform;
-                    }
+                    child.transform.parent = decalepool.gameObject.transform;
+                    child.gameObject.SetActive(false);
                 }
-                Destroy(gameObject);
             }
-            else Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

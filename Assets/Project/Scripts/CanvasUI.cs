@@ -7,6 +7,7 @@ public class CanvasUI : MonoBehaviour
 {
     [SerializeField] private Text ammo;
     [SerializeField] private Text points;
+    private int actPoints;
 
     public void UpdateAmmo(int loadedBullets, int unloadedBullets)
     {
@@ -15,6 +16,7 @@ public class CanvasUI : MonoBehaviour
 
     public void UpdatePoints(int point)
     {
-        points.text = "Points: " + point;
+        actPoints += point;
+        points.text = "Points: " + actPoints;
     }
 }

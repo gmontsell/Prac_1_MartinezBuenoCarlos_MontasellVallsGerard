@@ -96,16 +96,22 @@ public class Shooting : MonoBehaviour
         HealthSystem hs = hitInfo.transform.gameObject.GetComponent<HealthSystem>();
             if (hs != null)
             {
-                if (hs.CompareTag("Target")) { pointChanged.Invoke(10); }
-                else if (hs.CompareTag("ExplosiveBarrel")) { pointChanged.Invoke(5); }
+                
                 hs.takeDamage(bulletDmg);
                 
             }
+            if (hs.CompareTag("Target"))
+            {
+                pointChanged.Invoke(10);
+                Debug.Log("toma toma");
+            }
+            else if (hs.CompareTag("ExplosiveBarrel")) { pointChanged.Invoke(5); }
             //ADD deal
-        GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
+            GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
         deacle.transform.parent = hitInfo.transform;
         //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
         }
+
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
 
 
