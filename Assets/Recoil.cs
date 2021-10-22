@@ -18,8 +18,6 @@ public class Recoil : MonoBehaviour
         //X yaw y Y pitch
         float maxRecoil_x = Random.Range(0, rang_Recoil);
         float maxRecoil_y = Random.Range(-rang_Recoil, rang_Recoil);
-        Debug.Log(maxRecoil_x);
-        Debug.Log(contr_0);
         contr_0.modifMYaw(maxRecoil_x);
         contr_0.modifMPitch(maxRecoil_y);
 
