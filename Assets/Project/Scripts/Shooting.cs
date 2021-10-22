@@ -92,19 +92,21 @@ public class Shooting : MonoBehaviour
         //Para caida de bala hacemos calculo del raycast modificando la velocidad màxima
         Ray r = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
         RaycastHit hitInfo;
+        GameObject deacle;
         if (Physics.Raycast(r, out hitInfo, maxDistance, shootLayerMask)) { 
         HealthSystem hs = hitInfo.transform.gameObject.GetComponent<HealthSystem>();
             if (hs != null)
             {
                 if (hs.CompareTag("Target")) { pointChanged.Invoke(10); }
                 else if (hs.CompareTag("ExplosiveBarrel")) { pointChanged.Invoke(5); }
+                deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
+                deacle.transform.parent = hitInfo.transform;
                 hs.takeDamage(bulletDmg);
                 
             }
-            //ADD deal
-        GameObject deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
-        deacle.transform.parent = hitInfo.transform;
-        //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
+            deacle = deaclePool.activateObject(hitInfo.point + hitInfo.normal * zOffset, Quaternion.LookRotation(hitInfo.normal));
+            deacle.transform.parent = hitInfo.transform;
+            //Instantiate(decal, hitInfo.point+hitInfo.normal*zOffset, Quaternion.LookRotation(hitInfo.normal));
         }
         ammoChanged.Invoke(loadedBullets, unloadedBullets);
 

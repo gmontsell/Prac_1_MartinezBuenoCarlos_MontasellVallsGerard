@@ -36,7 +36,7 @@ public class HealthSystem : MonoBehaviour
 
     public void Start()
     {
-        if(gameObject.name=="Player") slider.value = health;
+        actSlider();
     }
     public void Update()
     {
@@ -48,7 +48,7 @@ public class HealthSystem : MonoBehaviour
     public void takeDamage(float value)
     {
         health -= calculateDmg(value);
-        slider.value = health;
+        actSlider();
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
@@ -69,6 +69,10 @@ public class HealthSystem : MonoBehaviour
                         allChildren[i].transform.parent = decalepool.gameObject.transform;
                     }
                 }
+                if (gameObject.tag == "Dron")
+                { 
+                    gameObject.transform.parent.GetComponent<Destroy>().destroy();
+                }
                 Destroy(gameObject);
             }
             else Destroy(gameObject);
@@ -78,14 +82,13 @@ public class HealthSystem : MonoBehaviour
     internal void restart()
     {
         health = initialHealth;
-        slider.value = health;
+        actSlider();
     }
 
     private float calculateDmg(float act_dmg)
     {
         Shield shield = gameObject.GetComponent<Shield>();
 
-       
             if (shield != null && shield.haveShield())
             {
                 return shield.calculateDmg(act_dmg);
@@ -94,14 +97,15 @@ public class HealthSystem : MonoBehaviour
             {
                 return act_dmg;
             }
-       
-        
     }
-
+    private void actSlider()
+    {
+        if (gameObject.name == "Player") slider.value = health;
+    }
     public void lifeIncrease(float health_inc)
     {
         health += health_inc;
         health = Mathf.Min(health, max_health);
-        slider.value = health;
+        actSlider();
     }
 }
