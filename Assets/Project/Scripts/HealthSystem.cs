@@ -2,7 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public delegate void DieFunction();
 
@@ -14,7 +15,9 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] DeaclePool decalepool;
 
     [SerializeField] GameManager1 gameManager;
-    
+    [SerializeField] private UnityEvent<int> pointChanged;
+
+    [SerializeField]  Slider slider;
 
     private float initialHealth;
     private DieFunction die;
@@ -31,7 +34,10 @@ public class HealthSystem : MonoBehaviour
         initialHealth = health;
     }
 
-
+    public void Start()
+    {
+        actSlider();
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.K))
@@ -42,31 +48,47 @@ public class HealthSystem : MonoBehaviour
     public void takeDamage(float value)
     {
         health -= calculateDmg(value);
+        actSlider();
         if (health <= 0.0f)
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
+            bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
-                if (child.gameObject.layer == 2)
-                {
-                    child.transform.parent = decalepool.gameObject.transform;
-                    child.gameObject.SetActive(false);
-                }
+                if (child.gameObject.layer==2) haveDecal = true;
+
             }
-            Destroy(gameObject);
+
+            if (haveDecal)
+            {
+                for (int i = 0; i < allChildren.Length; i++)
+                {
+                    if (allChildren[i].gameObject.layer == 2)
+                    {
+                        allChildren[i].gameObject.SetActive(false);
+                        allChildren[i].transform.parent = decalepool.gameObject.transform;
+                    }
+                }
+                if (gameObject.tag == "Dron")
+                { 
+                    gameObject.transform.parent.GetComponent<Destroy>().destroy();
+                }
+                Destroy(gameObject);
+            }
+            else Destroy(gameObject);
         }
     }
 
     internal void restart()
     {
         health = initialHealth;
+        actSlider();
     }
 
     private float calculateDmg(float act_dmg)
     {
         Shield shield = gameObject.GetComponent<Shield>();
 
-       
             if (shield != null && shield.haveShield())
             {
                 return shield.calculateDmg(act_dmg);
@@ -75,13 +97,15 @@ public class HealthSystem : MonoBehaviour
             {
                 return act_dmg;
             }
-       
-        
     }
-
+    private void actSlider()
+    {
+        if (gameObject.name == "Player") slider.value = health;
+    }
     public void lifeIncrease(float health_inc)
     {
         health += health_inc;
         health = Mathf.Min(health, max_health);
+        actSlider();
     }
 }
