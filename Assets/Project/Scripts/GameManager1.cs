@@ -26,6 +26,8 @@ public class GameManager1 : MonoBehaviour
     }
     public void setLastCheckpoint(int chekPoint)
     {
+        chekPoints[last_chekPoint].gameObject.GetComponent<CheckPoint>().desactivateChekPoint();
         last_chekPoint = chekPoint;
+        chekPoints[last_chekPoint].gameObject.GetComponent<CheckPoint>().activateChekPoint();
     }
 }
