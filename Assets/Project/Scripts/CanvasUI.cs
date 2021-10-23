@@ -17,6 +17,8 @@ public class CanvasUI : MonoBehaviour
 
     public void UpdatePoints(int point)
     {
+
+        //if()
         actPoints += point;
         points.text = "Points: " + actPoints;
     }
