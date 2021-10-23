@@ -9,9 +9,9 @@ public class Droop_Items : MonoBehaviour
     private void OnDestroy()
     {
         int random = Random.Range(0,item.Count);
-        int prob = 100-Random.Range(0, 100);
+        int prob = Random.Range(0, 100);
 
-        if (prob>prob_drop) {
+        if (prob<prob_drop) {
             Instantiate(item[random], transform.position, transform.rotation);
         }
 

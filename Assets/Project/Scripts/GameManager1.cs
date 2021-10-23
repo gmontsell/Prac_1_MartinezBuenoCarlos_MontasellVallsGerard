@@ -6,10 +6,13 @@ public class GameManager1 : MonoBehaviour
 {
 
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform initTransform;
     [SerializeField] private List<Transform> chekPoints;
     private int last_chekPoint;
 
+    private void Start()
+    {
+        setLastCheckpoint(0);
+    }
     public void gameOver()
     {
             Restart();
