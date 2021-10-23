@@ -15,7 +15,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] DeaclePool decalepool;
     
     [SerializeField] CanvasUI ui;
-    [SerializeField] private UnityEvent<int> pointChanged;
+    
 
     [SerializeField]  Slider slider;
 
