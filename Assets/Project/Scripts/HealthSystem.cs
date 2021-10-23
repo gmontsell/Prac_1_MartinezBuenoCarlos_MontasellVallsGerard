@@ -40,7 +40,7 @@ public class HealthSystem : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K) && gameObject.tag=="Player")
+        if ( health<=0 && gameObject.tag == "Player"  || Input.GetKeyDown(KeyCode.K) && gameObject.tag=="Player")
             die();
     }
 
