@@ -49,6 +49,11 @@ public class FPSController_0 : MonoBehaviour
     {
         Cursor.visible = true;
     }
+
+    private void OnDestroy()
+    {
+        
+    }
     void Awake()
     {
         mYaw = transform.rotation.eulerAngles.y;

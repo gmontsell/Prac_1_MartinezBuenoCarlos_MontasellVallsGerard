@@ -14,6 +14,6 @@ public class Player : MonoBehaviour
 
     private void died()
     {
-
+        Debug.Log("Muerto");
     }
 }

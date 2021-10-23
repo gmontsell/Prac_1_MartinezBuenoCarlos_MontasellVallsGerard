@@ -7,18 +7,20 @@ public class GameManager1 : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private Transform initTransform;
+    [SerializeField] private List<Transform> chekPoints;
 
-    public void gameOver()
+    public void gameOver(int idx)
     {
-        Restart();
+            Restart(idx);
+       
     }
 
-    public void Restart()
+    public void Restart(int idx)
     {
         player.GetComponent<HealthSystem>().restart();
         player.GetComponent<CharacterController>().enabled = false;
-        player.transform.position = initTransform.position;
-        player.transform.rotation = initTransform.rotation;
+        player.transform.position = chekPoints[idx].position;
+        player.transform.rotation = chekPoints[idx].rotation;
         player.GetComponent<CharacterController>().enabled = true;
 
     }
