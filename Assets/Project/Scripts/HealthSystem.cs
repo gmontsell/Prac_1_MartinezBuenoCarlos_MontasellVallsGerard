@@ -50,20 +50,15 @@ public class HealthSystem : MonoBehaviour
         
         health -= calculateDmg(value);
         actSlider();
-        if (health <= 0.0f)
+        if (health <= 0.0f && gameObject.tag != "Player")
         {
             Transform[] allChildren = GetComponentsInChildren<Transform>();
             bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
-                Debug.Log(child.tag);
-                if (child.gameObject.tag == "Target") {
-                    ui.UpdatePoints(10);
-                    }
+                if (child.gameObject.tag == "Target") {ui.UpdatePoints(10);}
                 else if (child.gameObject.tag == "ExplosiveBarrel") { ui.UpdatePoints(5); }
                 if (child.gameObject.layer==2) haveDecal = true;
-                
-
             }
 
             if (haveDecal)
