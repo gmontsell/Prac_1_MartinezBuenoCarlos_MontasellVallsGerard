@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] GameManager1 gameManager;
     private void Start()
     {
         GetComponent<HealthSystem>().setDieFunction(
@@ -14,6 +15,6 @@ public class Player : MonoBehaviour
 
     private void died()
     {
-        Debug.Log("Muerto");
+        gameManager.gameOver();
     }
 }

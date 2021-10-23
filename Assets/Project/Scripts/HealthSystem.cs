@@ -14,7 +14,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] float max_health = 200.0f;
     [SerializeField] DeaclePool decalepool;
 
-    [SerializeField] GameManager1 gameManager;
+    
     [SerializeField] private UnityEvent<int> pointChanged;
 
     [SerializeField]  Slider slider;
@@ -40,7 +40,7 @@ public class HealthSystem : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && gameObject.tag=="Player")
             die();
     }
 
