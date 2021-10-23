@@ -101,8 +101,7 @@ public class Shooting : MonoBehaviour
 
             if (hs != null)
             {
-                if (hs.CompareTag("Target")) { pointChanged.Invoke(10); }
-                else if (hs.CompareTag("ExplosiveBarrel")) { pointChanged.Invoke(5); }
+                
                 hs.takeDamage(bulletDmg);
             }
          

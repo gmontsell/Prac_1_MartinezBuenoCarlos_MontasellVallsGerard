@@ -47,6 +47,7 @@ public class HealthSystem : MonoBehaviour
 
     public void takeDamage(float value)
     {
+        pointChanged.Invoke(10);
         health -= calculateDmg(value);
         actSlider();
         if (health <= 0.0f)
@@ -55,12 +56,19 @@ public class HealthSystem : MonoBehaviour
             bool haveDecal = false;
             foreach (Transform child in allChildren)
             {
+                Debug.Log(child.tag);
+                if (child.gameObject.tag == "Target") {
+                    Debug.Log(child.tag); 
+                    }
+                else if (child.gameObject.tag == "ExplosiveBarrel") { pointChanged.Invoke(5); }
                 if (child.gameObject.layer==2) haveDecal = true;
+                
 
             }
 
             if (haveDecal)
             {
+                
                 for (int i = 0; i < allChildren.Length; i++)
                 {
                     if (allChildren[i].gameObject.layer == 2)
@@ -73,6 +81,7 @@ public class HealthSystem : MonoBehaviour
                 { 
                     gameObject.transform.parent.GetComponent<Destroy>().destroy();
                 }
+               
                 Destroy(gameObject);
             }
             else Destroy(gameObject);

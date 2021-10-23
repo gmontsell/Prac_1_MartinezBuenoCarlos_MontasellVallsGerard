@@ -7,7 +7,8 @@ public class CanvasUI : MonoBehaviour
 {
     [SerializeField] private Text ammo;
     [SerializeField] private Text points;
-    private int actPoints;
+    [SerializeField] private Collider col;
+    private int actPoints=0;
 
     public void UpdateAmmo(int loadedBullets, int unloadedBullets)
     {
