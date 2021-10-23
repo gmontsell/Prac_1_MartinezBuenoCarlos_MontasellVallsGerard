@@ -727,6 +727,41 @@ PrefabInstance:
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5331334859556448954, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
       propertyPath: m_RootOrder
@@ -903,6 +938,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: decalepool
+      value: 
+      objectReference: {fileID: 158789167}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5730343387638536341, guid: b64b3214cfc58ed41bcf9a55c7011402,
         type: 3}
       propertyPath: m_Name
@@ -956,6 +1036,51 @@ PrefabInstance:
         type: 3}
       propertyPath: health
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: decalepool
+      value: 
+      objectReference: {fileID: 158789167}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5331334859556448954, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
@@ -1219,6 +1344,46 @@ PrefabInstance:
       propertyPath: decalepool
       value: 
       objectReference: {fileID: 158789167}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5730343387638536341, guid: b64b3214cfc58ed41bcf9a55c7011402,
         type: 3}
       propertyPath: m_Name
@@ -1517,6 +1682,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: decalepool
+      value: 
+      objectReference: {fileID: 158789167}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5730343387638536341, guid: b64b3214cfc58ed41bcf9a55c7011402,
         type: 3}
       propertyPath: m_Name
@@ -1585,6 +1795,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: decalepool
+      value: 
+      objectReference: {fileID: 158789167}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5730343387638536341, guid: b64b3214cfc58ed41bcf9a55c7011402,
         type: 3}
@@ -1742,6 +1997,46 @@ PrefabInstance:
       propertyPath: decalepool
       value: 
       objectReference: {fileID: 158789167}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5331334859556448954, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
       propertyPath: m_RootOrder
@@ -3082,18 +3377,43 @@ PrefabInstance:
       objectReference: {fileID: 158789167}
     - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
       propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
       propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
     - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
       propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331334859556154251, guid: 61f34b6768d6ce041a6028a313a031dd,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5331334859556448954, guid: 61f34b6768d6ce041a6028a313a031dd,
         type: 3}
@@ -3234,6 +3554,46 @@ PrefabInstance:
       propertyPath: decalepool
       value: 
       objectReference: {fileID: 158789167}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1846518610}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6902218167584975641}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730343387638536338, guid: b64b3214cfc58ed41bcf9a55c7011402,
+        type: 3}
+      propertyPath: pointChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5730343387638536341, guid: b64b3214cfc58ed41bcf9a55c7011402,
         type: 3}
       propertyPath: m_Name
@@ -3511,6 +3871,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02516392, y: 0.10764833, z: 0.07564469}
   m_Center: {x: 9.313226e-10, y: -0.0013201255, z: -0.001066843}
+--- !u!114 &6902218167584975641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6902218167942109216, guid: b5c00a37590513b4d8c5356cece5b3e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6902218167584975636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20ea330a2e99fa43bc047b18f8e521e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8370890642410815096
 PrefabInstance:
   m_ObjectHideFlags: 0

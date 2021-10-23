@@ -13,8 +13,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] float health = 200.0f;
     [SerializeField] float max_health = 200.0f;
     [SerializeField] DeaclePool decalepool;
-
     
+    [SerializeField] CanvasUI ui;
     [SerializeField] private UnityEvent<int> pointChanged;
 
     [SerializeField]  Slider slider;
@@ -47,7 +47,7 @@ public class HealthSystem : MonoBehaviour
 
     public void takeDamage(float value)
     {
-        pointChanged.Invoke(10);
+        
         health -= calculateDmg(value);
         actSlider();
         if (health <= 0.0f)
@@ -58,9 +58,9 @@ public class HealthSystem : MonoBehaviour
             {
                 Debug.Log(child.tag);
                 if (child.gameObject.tag == "Target") {
-                    Debug.Log(child.tag); 
+                    ui.UpdatePoints(10);
                     }
-                else if (child.gameObject.tag == "ExplosiveBarrel") { pointChanged.Invoke(5); }
+                else if (child.gameObject.tag == "ExplosiveBarrel") { ui.UpdatePoints(5); }
                 if (child.gameObject.layer==2) haveDecal = true;
                 
 
