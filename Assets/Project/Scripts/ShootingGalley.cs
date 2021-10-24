@@ -24,7 +24,7 @@ public class ShootingGalley : MonoBehaviour
             //Si tiene no hacer nada 
 
         }
-        if (cs.getPoints() == 50 && textPoints.isActiveAndEnabled)
+        if (cs.getPoints() >= 50 && textPoints.isActiveAndEnabled)
         {
             nextLevel();
         }
