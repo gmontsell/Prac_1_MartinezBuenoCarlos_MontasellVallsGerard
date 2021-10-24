@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
+    [SerializeField] Enemy enemy;
+
+    public void patrol()
+    {
+        enemy.startPatrol();
+    }
     public void destroy()
     {
-        Destroy(gameObject);
+        enemy.destroy();
+    }
+
+    public void lastState()
+    {
+        enemy.startLastState();
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class MeshAgentTarget : MonoBehaviour
 {
 
-
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Transform[] walkPoints;
     [SerializeField] private Transform target;
@@ -16,17 +15,13 @@ public class MeshAgentTarget : MonoBehaviour
 
     private void Update()
     {
-        if (haveMove) {
+        if (haveMove)
+        {
             if (!detected) agent.destination = walkPoints[idx].position;
             else agent.destination = target.position;
         }
+        else agent.destination = gameObject.transform.position;
     }
-
-    public void changeWalkPoint(int walkPoint)
-    {
-        idx = walkPoint;
-    }
-
     public bool isOnPoint()
     {
         return gameObject.transform.position.x == walkPoints[idx].position.x
