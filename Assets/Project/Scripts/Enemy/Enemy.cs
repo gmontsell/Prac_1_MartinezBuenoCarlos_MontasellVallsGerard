@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
     private ENEMY_STATE currentState = ENEMY_STATE.IDLE;
     private ENEMY_STATE lastState = ENEMY_STATE.IDLE;
 
-    public ENEMY_STATE 
     public void startPatrol()
     {
         currentState = ENEMY_STATE.PATROL;
@@ -80,6 +79,7 @@ public class Enemy : MonoBehaviour
         anim.CrossFade("Dron_alert_2");
         if (_coneVision.isTargetLocated())
         {
+            Debug.Log("Dron");
             startChasing();
             agent.targetDetected();
         }
