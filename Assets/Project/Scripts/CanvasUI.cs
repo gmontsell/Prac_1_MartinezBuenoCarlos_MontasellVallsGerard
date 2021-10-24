@@ -20,4 +20,11 @@ public class CanvasUI : MonoBehaviour
         actPoints += point;
         points.text = "Points: " + actPoints;
     }
+
+    public int getPoints()
+    {
+        return this.actPoints;
+    }
+
+
 }
