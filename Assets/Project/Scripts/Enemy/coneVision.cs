@@ -8,7 +8,7 @@ public class coneVision : MonoBehaviour
     [SerializeField] float max_angle = 80;
     [SerializeField] float distance = 10;
     [SerializeField] LayerMask layerMask;
-    private bool targetLocated = false;
+    public bool targetLocated = false;
     void Update()
     {
         RaycastHit info;
@@ -20,7 +20,6 @@ public class coneVision : MonoBehaviour
                 float angle = Vector3.Angle(transform.forward, _direction);
                 if (angle <= max_angle)
                 {
-                    Debug.Log("Found it");
                     targetLocated = true;
                 }
                 else targetLocated = false;

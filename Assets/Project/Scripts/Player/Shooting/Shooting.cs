@@ -72,11 +72,6 @@ public class Shooting : MonoBehaviour
         anim.CrossFade("noAmmo_clip", 0.3f);
         anim.CrossFadeQueued("idle_clip", 0.3f);
     }
-    //void shooByInstantatiation()
-    //{
-    //    GameObject currBull = Instantiate(bullet, weaponDoomy.position, weaponDoomy.rotation);
-    //    currBull.GetComponent<Rigidbody>().velocity = weaponDoomy.forward * bulletSpeed;
-    //}
        
 
     public void addBullets(int numBullets)

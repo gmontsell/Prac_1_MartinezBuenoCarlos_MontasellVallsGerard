@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private coneVision _coneVision;
     [SerializeField] private Droop_Items droop;
     [SerializeField] private GameObject attack_range;
+    [SerializeField] private Enemy_shooting shoot;
     private void Start()
     {
         attack_range.SetActive(false);
@@ -37,6 +38,8 @@ public class Enemy : MonoBehaviour
     
     public void startChasing()
     {
+        shoot.enabled = false;
+        agent.continueFollowing();
         currentState = ENEMY_STATE.CHASING;
         anim.enabled = false;
         attack_range.SetActive(true);
@@ -44,9 +47,9 @@ public class Enemy : MonoBehaviour
 
     public void startAttack()
     {
-        Debug.Log("Start Atac");
+        shoot.enabled = true;
         currentState = ENEMY_STATE.ATTACK;
-        Debug.Log("Tate atac? " + currentState);
+
     }
     public void startHit()
     {
@@ -75,11 +78,9 @@ public class Enemy : MonoBehaviour
     }
     void updateAlert()
     {
-        Debug.Log("alert");
         anim.CrossFade("Dron_alert_2");
         if (_coneVision.isTargetLocated())
         {
-            Debug.Log("Dron");
             startChasing();
             agent.targetDetected();
         }
@@ -87,7 +88,6 @@ public class Enemy : MonoBehaviour
     }
     void updateChasing()
     {
-        Debug.Log("chasing");
         if (!_coneVision.isTargetLocated())
         {
             agent.enemyLost();
@@ -96,11 +96,9 @@ public class Enemy : MonoBehaviour
     }
     void updateAttack()
     {
-        
-        Debug.Log("Atac");
-        //agent.targetDetected();
-        //anim.enabled = true;
-        //anim.CrossFade("Dron_atack_2");
+        agent.stopWalk();
+        anim.enabled = true;
+        anim.CrossFade("Dron_atack");
     }
     void updateHit()
     {
