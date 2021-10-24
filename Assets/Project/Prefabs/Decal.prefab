@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7373603009713723081}
   - component: {fileID: 8139747533553224697}
   - component: {fileID: 3367505882016078146}
-  - component: {fileID: 4982701553223996791}
   - component: {fileID: 4550723071309748687}
   m_Layer: 2
   m_Name: Decal
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4982701553223996791
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681926008241049075}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &4550723071309748687
 MonoBehaviour:
   m_ObjectHideFlags: 0

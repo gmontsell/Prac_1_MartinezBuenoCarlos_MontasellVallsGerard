@@ -5,57 +5,70 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private Animation anim;
+    [SerializeField] private MeshAgentTarget agent; 
+    [SerializeField] private Droop_Items droop;
     enum ENEMY_STATE
     {
         IDLE, PATROL, ALERT, CHASING, ATTACK, HIT, DIE
     }
 
     private ENEMY_STATE currentState = ENEMY_STATE.IDLE;
+    private ENEMY_STATE lastState = ENEMY_STATE.IDLE;
 
 
-    void startPatrol()
+    public void startPatrol()
     {
         currentState = ENEMY_STATE.PATROL;
         //TODO: init patrol state
 
     }
 
-    void startAlert()
+    public void startAlert()
     {
         currentState = ENEMY_STATE.ALERT;
     }
 
     
-    void startChasing()
+    public void startChasing()
     {
         currentState = ENEMY_STATE.CHASING;
         //TODO: init chasing state
     }
 
-    void startAttack()
+    public void startAttack()
     {
         currentState = ENEMY_STATE.ATTACK;
     }
-    void startHit()
+    public void startHit()
     {
+        Debug.Log("HIT: " + currentState);
+        lastState = currentState;
         currentState = ENEMY_STATE.HIT;
+        Debug.Log("HIT: " + lastState);
     }
 
-    void startDie()
+    public void startDie()
     {
         currentState = ENEMY_STATE.DIE;
+        
+
     }
     void updateIdle()
     {
-        anim.CrossFade("Dron_die");
+        anim.CrossFade("Dron_idle");
     }
 
     private void updatePatrol()
     {
-       
+
+        if (agent.isOnPoint())
+        {
+            agent.nextPoint();
+        }
     }
     void updateAlert()
     {
+        Debug.Log("alert");
         anim.CrossFade("Dron_alert");
     }
     void updateChasing()
@@ -68,13 +81,21 @@ public class Enemy : MonoBehaviour
     }
     void updateHit()
     {
-
+        Debug.Log("Hit");
+        anim.CrossFade("Dron_hit_2");
     }
     void updateDie()
     {
+        Debug.Log("die");
         anim.CrossFade("Dron_die");
+        droop.dropItem();
+        Destroy(gameObject);
     }
 
+    public void startLastState()
+    {
+        currentState = lastState;
+    }
 
     private void Update()
     {

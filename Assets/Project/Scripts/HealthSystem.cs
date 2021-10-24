@@ -47,7 +47,10 @@ public class HealthSystem : MonoBehaviour
 
     public void takeDamage(float value)
     {
-        
+        if (gameObject.tag == "Dron")
+        {
+            gameObject.transform.parent.GetComponent<Enemy>().startHit();
+        }
         health -= calculateDmg(value);
         actSlider();
         if (health <= 0.0f && gameObject.tag != "Player")
@@ -74,10 +77,9 @@ public class HealthSystem : MonoBehaviour
                 }
                 if (gameObject.tag == "Dron")
                 { 
-                    gameObject.transform.parent.GetComponent<Destroy>().destroy();
+                    gameObject.transform.parent.GetComponent<Enemy>().startDie();
                 }
-               
-                Destroy(gameObject);
+               else  Destroy(gameObject);
             }
             else Destroy(gameObject);
         }

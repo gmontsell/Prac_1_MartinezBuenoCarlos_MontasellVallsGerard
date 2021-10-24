@@ -6,7 +6,7 @@ public class Droop_Items : MonoBehaviour
 {
    [SerializeField] List<GameObject> item =new List<GameObject>();
     [SerializeField] float prob_drop = 30.0f;
-    private void OnDestroy()
+    public void dropItem()
     {
         int random = Random.Range(0,item.Count);
         int prob = Random.Range(0, 100);
